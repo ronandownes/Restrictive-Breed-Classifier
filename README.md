@@ -4,6 +4,12 @@
 
 This project develops and evaluates deep learning models for the classification of dog breeds restricted under Irish law. It explores transfer learning with frozen convolutional bases, batch normalization, dropout regularisation, and fine-tuning strategies.  
 
+## Data Source  
+The models are trained on the **Stanford Dogs dataset** (Khosla et al., 2011), a fine-grained subset of **ImageNet** containing over 20,000 images across 120 breeds.  
+- The Stanford Dogs dataset was selected because it provides **high-resolution, labelled images** suitable for transfer learning.  
+- Not all legally restricted breeds are represented (e.g., the American XL Bully). To maintain reproducibility and avoid introducing ad-hoc or unverified images, the project focused on the subset of restricted breeds that are included in Stanford Dogs (e.g., Rottweiler, Doberman, German Shepherd, Staffordshire Bull Terrier).  
+- This design choice allowed a **balanced binary classification task** (restricted vs unrestricted breeds) that reflects the enforcement context in Irish law, while still being technically feasible with limited data:contentReference[oaicite:1]{index=1}.  
+
 ## Key Features  
 - **Transfer Learning on ImageNet:** Six pretrained CNN architectures benchmarked:  
   - VGG16  
